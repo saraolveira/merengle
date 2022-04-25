@@ -1,4 +1,6 @@
 # Merengle
+https://merengle.vercel.app/
+
 A Real Madrid player guessing game, inspired by Wordle & Poeltl.
 
 - 7 attempts to guess one Real Madrid player each day.
