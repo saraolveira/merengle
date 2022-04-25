@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Merengle</title>
+    <meta name="description" content="Merengle: el juego inspirado por Wordle en el que tienes que adivinar un jugador del Real Madrid diariamente. Merengle: the Wordle-inspired game where you have to guess a Real Madrid player daily."/>
+    <meta name="keywords" content="real madrid, madrid, wordle, futbol, baloncesto, football, basketball, wordle"/>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="img/icon.png" />
+    <script src="https://kit.fontawesome.com/ffebfeda30.js" crossorigin="anonymous"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6EXWN3YVRR"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-6EXWN3YVRR');
+    </script>
+</head>
+<body>
+    <div class="game-container">
+        <img src="/img/logo.png" alt="logo merengle" class="logo">
+        <div class="info">
+            <i class="fa-solid fa-chart-simple stats-button"></i>
+            <i class="fa-solid fa-circle-question info-button"></i>
+            <i class="fa-solid fa-lightbulb light-button"></i>
+        </div>
+        <div class="search">
+            <input type="text" name="" id="hcraes" autocomplete="new-password">
+            <div class="match-list"></div>
+        </div>
+        <div class="row-container"> 
+            <div class="title-row">
+                <span class="jersey-name title-column"></span>
+                <span class="team title-column">Equipo</span>
+                <span class="position title-column">Pos</span>
+                <span class="number title-column">Núm</span>
+                <span class="year title-column">Año</span>
+                <span class="country title-column">País</span>
+                <span class="height title-column">Alt</span>
+            </div>
+            <div class="guess-container">
+            </div>
+        </div>
+        <footer>
+            <p>Creado por <a href="https://saraolveira.socialmediauvigo.com/" target="_black">OlvWeb</a></p>
+        </footer>
+    </div>
+
+    <div class="instr">
+        <i class="fa-solid fa-xmark instr-close"></i>
+        <div class="lang es">
+            <h2>¡Adivina al madrididista!</h2>
+            <ul class="instructions">
+                <li>Tienes 7 intentos para adivinar un jugador o jugadora actual del primer equipo de fútbol masculino y femenino y de baloncesto</li>
+                <li><span class="highlight-p">Lila</span> indica acierto</li>
+                <li><span class="highlight-y">Amarillo</span> indica cercania</li>
+                    <ul class="secondary-list">
+                        <li>En la columna de posición indica cercanía en el campo</li>
+                        <li>En la columna de país indica frontera</li>
+                        <li>En las columnas numéricas indica una diferencia de 2 números</li>
+                    </ul>
+                <li>La posición de cada jugador está de acuerdo a la página oficial del Real Madrid</li>
+                <li class="smaller">POR: Portero, DEF: Defensa, CEN: Centrocampista, DEL: Delantero, B: Base, E: Escolta, A: Alero, AP: Ala Pívot, P: Pívot </li>
+                <h2>¡Vuelve cada día!</h2>
+            </ul>
+            <div class="switch english">Switch to English</div>
+        </div>
+        <div class="lang en">
+            <h2>Guess the madrididista!</h2>
+            <ul class="instructions">
+                <li>You have 7 trys to guess a current player from the football & basketball teams</li>
+                <li><span class="highlight-p">Purple</span> means correct</li>
+                <li><span class="highlight-y">Yellow</span> means closeness</li>
+                    <ul class="secondary-list">
+                        <li>In the position column it means close on the field</li>
+                        <li>In the country column it means neighbor countries</li>
+                        <li>In the columns with numbers it means a difference of two numbers</li>
+                    </ul>
+                <li>Player's positions are according to Real Madrid official website</li>
+                <li class="smaller">POR: Goalkeeper, DEF: Defense, CEN: Midfielder, DEL: Striker/Forward, B: Point Guard, E: Shooting Guard, A: Small Foward, AP: Power Foward, P: Center </li>
+                <h2>Come back everyday!</h2>
+            </ul>
+            <div class="switch spanish">Cambia a Español</div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <i class="fa-solid fa-xmark stats-close"></i>
+        <div class="stat stat-border">
+            <div class="stat-number" id="played"></div>
+            <p>Judagos</p>
+        </div>
+        <div class="stat stat-border">
+            <div class="stat-number" id="winpct"></div>
+            <p>Ganados</p>
+        </div>
+        <div class="stat">
+            <div class="stat-number" id="streak"></div>
+            <p>Racha</p>
+        </div>
+    </div>
+
+    <div class="win">
+    </div>
+
+    <div class="lose">
+    </div>
+    
+    <script type="module" src="app.js"></script>
+</body>
+</html>
